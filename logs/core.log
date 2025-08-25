@@ -1,0 +1,19 @@
+2025-08-25 21:02:33,542 - core - INFO - Loaded 89 diseases from data\diseases.json
+2025-08-25 21:02:33,542 - core - INFO - Vocab built: 400 phrases
+2025-08-25 21:02:34,938 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+2025-08-25 21:02:34,939 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-25 21:02:34,943 - werkzeug - INFO -  * Restarting with stat
+2025-08-25 21:02:35,851 - core - INFO - Loaded 89 diseases from data\diseases.json
+2025-08-25 21:02:35,852 - core - INFO - Vocab built: 400 phrases
+2025-08-25 21:02:35,938 - werkzeug - WARNING -  * Debugger is active!
+2025-08-25 21:02:35,967 - werkzeug - INFO -  * Debugger PIN: 744-542-704
+2025-08-25 21:02:52,105 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:02:52] "GET / HTTP/1.1" 200 -
+2025-08-25 21:02:52,458 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:02:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-08-25 21:02:52,473 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:02:52] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-08-25 21:02:52,732 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:02:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-25 21:03:45,386 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:03:45] "POST / HTTP/1.1" 200 -
+2025-08-25 21:03:45,650 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:03:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-25 21:03:45,806 - werkzeug - INFO - 127.0.0.1 - - [25/Aug/2025 21:03:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
