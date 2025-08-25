@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>AI Symptom Diagnosis</h1>
+  <form method="post" class="row">
+    <label for="symptoms">Enter your symptoms:</label>
+    <textarea id="symptoms" name="symptoms" rows="3" placeholder="e.g., fever, cough, sore throat">{{ user_input or "" }}</textarea>
+    <button class="btn primary" type="submit">Check</button>
+  </form>
+  {% if message %}
+    <div class="alert info">{{ message }}</div>
+  {% endif %}
+  {% if result %}
+    <div class="results">
+      <div class="primary">
+        <h2>Most likely</h2>
+        <div class="pill">{{ result.disease }}</div>
+        <div class="meter"><span style="width: {{ result.confidence }}%"></span></div>
+        <p class="muted">Confidence: {{ result.confidence }}%</p>
+        {% if result.matched %}
+        <p class="muted">Matched: {{ result.matched|join(", ") }}</p>
+        {% endif %}
+        {% if result.treatment %}
+        <p><strong>Treatment:</strong> {{ result.treatment }}</p>
+        {% endif %}
+      </div>
+      {% if possible and possible|length > 0 %}
+      <div class="others">
+        <h3>Other possibilities</h3>
+        <ul class="list">
+          {% for item in possible %}
+          <li>
+            <span class="pill alt">{{ item.disease }}</span>
+            <span class="conf">{{ item.confidence }}%</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</section>
+{% endblock %}

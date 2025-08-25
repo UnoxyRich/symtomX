@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SymptomX — AI Symptom Diagnosis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">🩺 SymptomX</div>
+    <button id="theme-toggle" class="btn ghost" aria-label="Toggle theme">Dark Mode</button>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="foot">SymptomX • Offline & Private • No internet model downloads</footer>
+</body>
+</html>
